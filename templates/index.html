@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Metropolia Student Helpmate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<div class="main-text">
+    <h1>Metropolia <span class="orange">Student Helpmate</span></h1>
+    <p class="text-xs text-gray-500 hidden sm:block">Student Support & Wellbeing System</p>
+</div>
+
+<form method="POST" id="predictionForm">
+    <input type="text" name="user_text" placeholder="How could I help you?">
+    <button type="submit">Submit</button>
+</form>
+
+<div id="result" class="resultContainer">
+    <p id="resultP"></p>
+</div>
+
+<!-- <div id="data" data-json='{{ data | tojson }}'></div> -->
+
+</body>
+</html>
